@@ -1,5 +1,7 @@
+//Dependencies
 var mysql = require("mysql");
 
+//Connection to MySql - burgers_db
 var connection = mysql.createConnection({
   host: "localhost",
   port: 8889,
