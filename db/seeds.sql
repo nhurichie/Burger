@@ -1,14 +1,29 @@
 INSERT INTO burgers
   (burger_name, devoured)
 VALUES
-  ("vegan blk bean", 26);
+  ("hamburger", false);
 
 INSERT INTO burgers
   (burger_name, devoured)
 VALUES
-  ("turducken", 18);
+  ("cheeseburger", false);
 
 INSERT INTO burgers
   (burger_name, devoured)
 VALUES
-  ("tofurkey", 07);
+  ("banh mi burger", false);
+
+INSERT INTO burgers
+  (burger_name, devoured)
+VALUES
+  ("tofubuger", false);
+
+INSERT INTO burgers
+  (burger_name, devoured)
+VALUES
+  ("black bean burger", false);
+
+INSERT INTO burgers
+  (burger_name, devoured)
+VALUES
+  ("impossible burger", false);
