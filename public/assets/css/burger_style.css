@@ -1,0 +1,21 @@
+.jumbotron {
+  background-color: lightcyan;
+  background-position: right;
+  color:lightcoral;
+  margin-top: 6%;
+}
+#newburger {
+  color: black;
+}
+#leftside {
+  background-color: lightcyan;
+  color:lightcoral;
+  text-align: center;
+  font-size: 12pt;
+}
+#rightside {
+  background-color: lightcyan;
+  color:lightcoral;
+  text-align: center;
+  font-size: 12pt;
+}
