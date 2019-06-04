@@ -1,12 +1,12 @@
 //DEPENDENCIES
 var connection = require("../config/connection");
 
+
 //HELPER FUNCTIONS -- MYSQL 
 function printQMarks(num) {
   var arr = [];
-
   for (var i = 0; i < num; i++) {
-    arr.push("?")
+    arr.push("?");
   }
   return arr.toString();
 }
@@ -25,13 +25,15 @@ function objToSql(ob) {
       arr.push(key + "=" + value);
     }
   }
+
+  // translate array of strings to a single comma-separated string
   return arr.toString();
 }
 
 // METHODS -- MYSQL to CONTROLLERS
 var orm = {
   //`selectAll()`
-  selectAll: function (tableInput, cd) {
+  selectAll: function (tableInput, cb) {
     var queryDBString = "SELECT * FROM " + tableInput + ";";
     connection.query(queryDBString, function (err, res) {
       if (err) {
@@ -48,7 +50,7 @@ var orm = {
     queryDBString += cols.toString();
     queryDBString += ") ";
     queryDBString += "VALUES (";
-    queryDBString += printQuestionMarks(vals.length);
+    queryDBString += printQMarks(vals.length);
     queryDBString += ") ";
 
     console.log(queryDBString);

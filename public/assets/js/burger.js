@@ -19,17 +19,17 @@ $(".eatburger").on("click", function (event) {
 
 //preventDefault
 $(function () {
-  $(".change-form").on("click", function (event) {
+  $(".create-form").on("click", function (event) {
     event.preventDefault();
 
     var newBurger = {
       burger_name: $("newBurger").val().trim(),
-      devoured: 0
+      devoured: $("[name=burger]:checked").val().trim()
     };
 
     //SEND POST REQUEST
 
-    $.ajax("api/burgers", {
+    $.ajax("api/burgers" + id, {
       type: "POST",
       data: newBurger
     }).then(function () {

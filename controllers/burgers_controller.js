@@ -3,17 +3,17 @@ var express = require("express");
 var router = express.Router();
 
 //IMPORT MODEL to USE DATABASE FUNCTIONS
-var burger = require("../models/burger");
+var burger = require("../models/burger.js");
 
 // Create the `router` for the app, and export the `router` at the end of your file.
 
 router.get("/", function (req, res) {
   burger.selectAll(function (data) {
-    var hbarsOject = {
-      burgers: data
+    var hbsObject = {
+      burger: data
     };
-    console.log(hbarsOject);
-    res.render("index", hbarsOject);
+    console.log(hbsObject);
+    res.render("index", hbsObject);
   });
 });
 
