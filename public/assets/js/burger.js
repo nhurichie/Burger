@@ -18,23 +18,6 @@ $(function () {
     });
   });
 
-  $(".eatburger").on("click", function (event) {
-    event.preventDefault();
-
-    var id = $(this).data("id");
-    var devouredState = {
-      devoured: 1
-    };
-
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: devouredState
-    }).then(function () {
-      console.log("Burger devoured");
-      location.reload();
-    });
-  });
-
   $(".create-form").on("click", function (event) {
     event.preventDefault();
 
@@ -51,6 +34,18 @@ $(function () {
       console.log("create new burger");
       location.reload();
     });
+  });
+
+  $(".trashburger").on("click", function (event) {
+    event.preventDefault();
+
+    var id = $(this).data("id");
+
+    //DELETE REQUEST
+    $.ajax({
+      type: "DELETE",
+      url: "/api/burgers/" + id
+    }).then(location.reload());
   });
 
 });

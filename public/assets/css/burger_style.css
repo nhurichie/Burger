@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: lightcyan;
+  background-color: lightyellow;
   background-position: right;
   color:lightcoral;
   margin-top: 6%;
@@ -8,13 +8,13 @@
   color: black;
 }
 #leftside {
-  background-color: lightcyan;
+  background-color: lightyellow;
   color:lightcoral;
   text-align: center;
   font-size: 12pt;
 }
 #rightside {
-  background-color: lightcyan;
+  background-color: lightyellow;
   color:lightcoral;
   text-align: center;
   font-size: 12pt;

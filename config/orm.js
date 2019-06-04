@@ -78,6 +78,19 @@ var orm = {
       }
       cb(res);
     });
+  },
+
+  //`deleteOne()`
+  deleteOne: function (table, condition, cb) {
+    var queryDBString = "DELETE FROM " + table + " WHERE " + condition;
+    console.log(queryDBString);
+
+    connection.query(queryDBString, function (err, res) {
+      if (err) {
+        throw err;
+      }
+      cb(res);
+    });
   }
 };
 //Export ORM object in module.exports for other modules
